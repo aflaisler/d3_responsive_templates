@@ -1,9 +1,11 @@
 # d3_responsive_templates
 Collection of simple D3 templates with data provided by flask/py
 
+## dynamic tree
 ![image](png/dynTree.png)
 
+## interpolate
 ![interpolate image](png/interpolate.png)
 
-##(only single line responsive so far)
+## single_line
 ![line image](png/single_line.png)
