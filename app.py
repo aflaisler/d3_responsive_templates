@@ -21,6 +21,11 @@ def simpleGraph():
     return render_template('simple-graph.html')
 
 
+@app.route('/multipleLines')
+def multipleLines():
+    return render_template('multiple-lines.html')
+
+
 @app.route('/interpolate')
 def interpolate():
     return render_template('interpolate.html')
@@ -32,9 +37,10 @@ def simple_graph_plus_table_plus_addins():
 
 
 @app.route('/d3data')
-def get_data(filename='data-3.csv'):
+def get_data(filename='data2.csv'):
     data = pd.read_csv('./data/' + filename)
-    return json.dumps([{'date': data.iloc[i, 0], 'close': data.iloc[i, 1]} for i in range(data.shape[0])])
+    key = data.columns
+    return json.dumps([{key[i]: data.loc[j, key[i]] for i in range(data.shape[1])} for j in range(data.shape[0])])
 
 
 @app.route('/data')
