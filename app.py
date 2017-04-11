@@ -31,6 +31,11 @@ def interpolate():
     return render_template('interpolate.html')
 
 
+@app.route('/interactiveTree')
+def interactiveTree():
+    return render_template('interactive-tree.html')
+
+
 @app.route('/simple_graph_plus_table_plus_addins')
 def simple_graph_plus_table_plus_addins():
     return render_template('simple-graph-plus-table-plus-addins.html')
