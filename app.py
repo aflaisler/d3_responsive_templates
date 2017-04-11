@@ -1,6 +1,3 @@
-'''
-This file is part of the flask+d3 Hello World project.
-'''
 import json
 from flask import Flask, render_template
 import numpy as np
@@ -21,11 +18,21 @@ def index():
 
 @app.route('/simpleGraph')
 def simpleGraph():
-    return render_template('simple-graph.html', data_=data(1000))
+    return render_template('simple-graph.html')
+
+
+@app.route('/interpolate')
+def interpolate():
+    return render_template('interpolate.html')
+
+
+@app.route('/simple_graph_plus_table_plus_addins')
+def simple_graph_plus_table_plus_addins():
+    return render_template('simple-graph-plus-table-plus-addins.html')
 
 
 @app.route('/d3data')
-def get_data(filename='data.csv'):
+def get_data(filename='data-3.csv'):
     data = pd.read_csv('./data/' + filename)
     return json.dumps([{'date': data.iloc[i, 0], 'close': data.iloc[i, 1]} for i in range(data.shape[0])])
 
