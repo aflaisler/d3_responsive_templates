@@ -1,5 +1,5 @@
 # d3_responsive_templates
-Collection of simple D3 templates with data provided by flask/py
+Collection of simple D3 templates with data served by flask (python)
 
 ## dynamic graph
 ![image](png/graph.png)
@@ -10,5 +10,5 @@ Collection of simple D3 templates with data provided by flask/py
 ## interpolate
 ![interpolate image](png/interpolate.png)
 
-## single_line
+## single_line (responsive)
 ![line image](png/single_line.png)
